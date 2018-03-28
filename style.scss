@@ -1,0 +1,78 @@
+@import "colors/_colors.scss";
+@import "fonts/_fonts.scss";
+@import "partials/reset.scss";
+@import "partials/_cta.scss";
+@import "partials/_productLists.scss";
+@import "partials/_nav.scss";
+@import "partials/_footer.scss";
+@import "mixins/_prefixing.scss";
+
+
+// Added to reset.scss
+
+// Nav aslo added to _nav.scc
+
+// Section modified
+  section{
+    height: 100vh;
+    padding-top: 40px;
+    h2{
+     font-size: $sectionFont1;
+     text-align: center;
+     padding-bottom: 20px;
+   }
+   // has same font size of cta
+   &>p.intro{
+     font-size: $myCtaFont;
+     width: 80%;
+     margin: 20px auto;
+     color: $contactWhiteFont;
+     padding: 20px;
+     background-color: $black;
+   }
+  }
+
+
+  /*landing page styles go below*/
+  #landing {
+    h1{
+      font-size: $landingFont1;
+      text-align: center;
+      padding-bottom: 10px;
+    }
+
+    p{
+      font-size: $landingFont2;
+      margin: 60px 20px;
+    }
+  }
+
+// Cta also added to _cta.scss
+
+
+// Products moved to _productLists.scss
+
+/*finally lets style the contact page*/
+  #contact{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    dl{
+      background: $contactSeaGreenColor;
+      color: $contactWhiteFont;
+      padding: 40px;
+      // prefixmixing box-shadow
+      @include box-shadow (5px, 5px, 5px, $contactCCCshadow);
+    }
+    dd{
+      font-size: $contactFont1;
+    }
+    dt{
+      font-size: $contactFont2;
+      text-decoration: underline;
+      margin-bottom: 10px;
+    }
+    dt:nth-of-type(2){
+      margin-top:60px;
+    }
+  }

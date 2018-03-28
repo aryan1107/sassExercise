@@ -1,0 +1,21 @@
+// all nav elements in _nav.scss
+nav{
+  position: fixed;
+  width: 100vw;
+  ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    height: 40px;
+    align-items: center;
+    background: $navbarColor;
+    font-size: $myNavfont;
+  }
+  a{
+    text-decoration:none;
+    color: $navbarFontcolor;
+  }
+  a:hover{
+    text-decoration: underline;
+  }
+}
